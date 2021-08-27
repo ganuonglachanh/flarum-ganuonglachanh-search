@@ -1,13 +1,11 @@
 <?php namespace GaNuongLaChanh\Search;
 
 use Flarum\Extend;
-use Illuminate\Events\Dispatcher;
+use GaNuongLaChanh\Search\Gambit\TitleGambit;
+use Flarum\Discussion\Search\DiscussionSearcher;
 
 return [
-    (new Extend\ServiceProvider())
-        ->register(Providers\SearchServiceProvider::class)
+    (new Extend\SimpleFlarumSearch(DiscussionSearcher::class))
+        ->setFullTextGambit(TitleGambit::class)
     ,
-    function(Dispatcher $events) {        
-        $events->subscribe(Listeners\AddClientGamBit::class);
-    }
 ];

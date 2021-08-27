@@ -26,18 +26,18 @@ class MySqlDiscussionTitleDriver
         }
 
 
-        $discussionIds = Post::where('type','=', 'comment')
+        /* $discussionIds = Post::where('type','=', 'comment')
             ->where("is_approved", 1)
             ->where("is_private", 0)
             ->whereNull('hidden_at')
             ->whereRaw('MATCH (`content`) AGAINST (? IN NATURAL LANGUAGE MODE)', [$string])
             //->orderByRaw('MATCH (`content`) AGAINST (?) DESC', [$string])
             ->limit(20)
-            ->pluck('discussion_id', 'id');
+            ->pluck('discussion_id', 'id'); 
 
         foreach ($discussionIds as $postId => $discussionId) {
             $relevantPostIds[$discussionId][] = $postId;
-        }
+        } */
 
         return $relevantPostIds;
     }
