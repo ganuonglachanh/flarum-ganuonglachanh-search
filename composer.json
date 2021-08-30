@@ -1,5 +1,5 @@
 {
-    "name": "ganuonglachanh/search",
+    "name": "ganuonglachanh/flarum-ext-search",
     "description": "Allows to search by discusstion title",
     "keywords": ["search","flarum"],
     "type": "flarum-extension",
