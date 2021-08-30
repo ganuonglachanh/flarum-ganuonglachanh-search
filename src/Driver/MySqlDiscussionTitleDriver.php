@@ -1,7 +1,7 @@
 <?php
 namespace GaNuongLaChanh\Search\Driver;
 
-use Flarum\Post\Post;
+//use Flarum\Post\Post;
 use Flarum\Discussion\Discussion;
 
 class MySqlDiscussionTitleDriver
