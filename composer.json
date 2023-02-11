@@ -4,7 +4,6 @@
     "keywords": ["search","flarum"],
     "type": "flarum-extension",
     "license": "MIT",
-    "version": "0.5.1",
     "authors": [
         {
             "name": "GaNuongLaChanh",
